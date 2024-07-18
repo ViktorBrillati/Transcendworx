@@ -4,7 +4,7 @@ module.exports = async (req, res, next) => {
     try {
         const user = await User.findById(req.session.userId);
         if (!user) {
-            return res.redirect('/');
+            return res.redirect('/blog');
         }
         next();
     } catch (error) {
