@@ -1,23 +1,30 @@
 body {
-    background-color: #71002c;
+    background-color: #726408;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 /*navbar*/
 .navbar {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background: rgb(176,170,186);
-    background: linear-gradient(133deg, rgba(176,170,186,1) 0%, rgba(119,105,114,1) 50%, rgba(176,170,186,1) 100%);
+
 }
+
 .navbar-brand {
     padding-left: 40px;
 }
-.nav-link {
-    font-size: 1.5rem;
-    color: #71002C;
-}
+
 .nav-item {
     margin-right: 30px;
     font-weight: bold;
+}
+
+.nav-link {
+    font-size: 1.5rem;
+    color: #72082C;
+}
+
+.nav-link:hover {
+    color: #085272;
 }
 
 @media (max-width: 992px) {
@@ -31,69 +38,70 @@ body {
         text-align: center;
     }
 }
+
 /*main section*/
 .hero {
     padding-bottom: 90px;
     background-image: url('https://images.unsplash.com/photo-1629730126973-a158c1fcd898?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
-	background-position: 50% 50%;
-	background-repeat: no-repeat;
-	background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
     /* needed to prevent janky scrolling in Safari*/
     backface-visibility: hidden;
     /*100% height of the viewport*/
-	height: auto;
-	overflow: hidden;
-	position: relative;
-	width: 100%;
-	
-	@media screen and (min-width:640px) {
-		background-position: 50% 0;
-	}
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
 
-	/* Add a slight overlay on our image*/
-	&:after {
-		background-color: rgba(45,4,14,.5);
-		bottom: 0;
-		content: '';
-		left: -2000%;
-		position: absolute;
-		right: -2000%;
-		top: 0;
-		z-index: 1;
-	}
+    @media screen and (min-width:640px) {
+        background-position: 50% 0;
+    }
+
+    /* Add a slight overlay on our image*/
+    &:after {
+        background-color: rgba(113, 0, 44, 0.5);
+        bottom: 0;
+        content: '';
+        left: -2000%;
+        position: absolute;
+        right: -2000%;
+        top: 0;
+        z-index: 1;
+    }
 }
 
 .hero-container {
-	box-sizing: border-box;
-	height: auto;
-	padding: 30px 50px;
-	position: relative;
-	z-index: 2;
+    box-sizing: border-box;
+    height: auto;
+    padding: 30px 50px;
+    position: relative;
+    z-index: 2;
 
     /* set our fade for when the JS kicks in on scroll*/
-    -webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
-    transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     -webkit-transition-duration: 1.2s;
     transition-duration: 1.2s;
-	
-	@media screen and (min-width:640px) {
-		height: 100%;
-	}
 
-	p {
-		color: #c0c0c0c0;
-		font-size: 13px;
+    @media screen and (min-width:640px) {
+        height: 100%;
+    }
+
+    p {
+        color: #fff;
+        font-size: 13px;
         font-weight: bold;
-		letter-spacing: 6px;
+        letter-spacing: 6px;
         opacity: 0.8;
         text-transform: uppercase;
         text-align: left;
-	}
+    }
 }
 
 .hero-button {
-    background: rgba(113,0,44,0.7);
-    color: #c0c0c0;
+    background: rgba(114, 8, 44, 0.8);
+    color: #fff;
     font-size: 24px;
     float: left;
     text-transform: uppercase;
@@ -101,36 +109,39 @@ body {
     margin-top: 30px;
     padding: 20px 90px;
     text-decoration: none;
+    border-radius: 15px;
 }
+
 .hero-button:hover {
-    background-color: #c0c0c0;
-    color: #71002c;
+    background-color: #726408;
+    color: #fff;
 }
 
 .hero-title {
-	color: #c0c0c0;
+    color: #fff;
     /* Respond to viewport width–works well since we're sizing the image according viewport height*/
-	font-size: 2rem; 
-	font-weight: 500;
-	letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
     line-height: 1.1;
     margin: 5px 0;
     text-align: left;
     width: 85%;
+
     @media screen and (min-width:640px) {
-		font-size: 10vw;
-	}
+        font-size: 10vw;
+    }
 }
 
 .main-content {
     height: auto;
-	padding: 30px 50px;
-	position: relative;
+    padding: 30px 50px;
+    position: relative;
     width: 60%;
 }
 
 .main-content p {
-    color: #c0c0c0;
+    color: #fff;
     font-size: 18px;
     line-height: 1.5;
 }
@@ -140,23 +151,23 @@ Need to refactory and Sassify–just proof-of-concept and testing right now
 Basically tweaking transform, translates inside keyframes and adding delays*/
 
 @keyframes fadeInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: translate3d(-12px, 0, 0);
-    /*transform: translate3d(-100%, 0, 0);*/
-    transform: translate3d(-12px, 0, 0);
-  }
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-12px, 0, 0);
+        /*transform: translate3d(-100%, 0, 0);*/
+        transform: translate3d(-12px, 0, 0);
+    }
 
-  to {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
 }
 
 .fadeInLeft {
-  -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+    -webkit-animation-name: fadeInLeft;
+    animation-name: fadeInLeft;
 }
 
 .animate {
@@ -166,35 +177,32 @@ Basically tweaking transform, translates inside keyframes and adding delays*/
 }
 
 .delay {
-  animation-delay: 1s;
+    animation-delay: 1s;
 }
 
 .delay-400 {
-  animation-delay: 0.4s;
+    animation-delay: 0.4s;
 }
 
 .delay-500 {
-  animation-delay: 0.5s;
+    animation-delay: 0.5s;
 }
 
 .delay-600 {
-  animation-delay: 0.6s;
+    animation-delay: 0.6s;
 }
 
 .delay-700 {
-  animation-delay: 0.7s;
+    animation-delay: 0.7s;
 }
 
 .delay-800 {
-  animation-delay: 0.8s;
+    animation-delay: 0.8s;
 }
 
-
-
 /*prpfile section*/
-
 .profile {
-    background-color: #71002C;
+    background-color: #726408;
     display: flex;
     margin: 15px;
     font-size: 1rem;
@@ -232,10 +240,13 @@ Basically tweaking transform, translates inside keyframes and adding delays*/
     opacity: 1;
     width: 100%;
     vertical-align: top;
+    height: 315px;
+    width: 315px;
 }
 
 .snip1495 figcaption {
-    background-color: #c0c0c0;
+    background-color: rgba(114, 8, 44, 0.75);
+    color: #fff;
     position: absolute;
     bottom: 15px;
     z-index: 2;
@@ -271,7 +282,7 @@ Basically tweaking transform, translates inside keyframes and adding delays*/
     padding: 8px;
     display: inline-block;
     font-size: 22px;
-    color: #ffffff;
+    color: #fff;
     opacity: 0.8;
     border-bottom: 4px solid transparent;
     margin-bottom: -4px;
@@ -316,55 +327,42 @@ Basically tweaking transform, translates inside keyframes and adding delays*/
 
 /*bio page*/
 img {
-  background-size: cover;
+    background-size: cover;
 }
+
 .card {
-  /*border: 2px solid green;*/
-  margin-top: 35px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
-  background-color: #C0C0C0;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    background-color: #72082C;
 }
 
 .top-img {
-  /*border: 2px solid blue;*/
-  background-image: url(https://images.unsplash.com/photo-1719230693769-b8b3224d4016?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3MjA3MzYyOTd8&ixlib=rb-4.0.3&q=85);
-  height: 200px;
-  width: 200px; 
-  border-radius: 50%;
-  margin: 15px auto;
-  border: 2px solid #71002C;
+    background-image: url();
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 15px auto;
+    border: 2px solid #71002C;
 }
 
 .card-body {
-  /*border: 2px solid orange;*/
-  text-align: center;
+    text-align: center;
+    color: #fff;
 }
 
 .bottomboxes {
-  /*border: 2px solid black;*/
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  padding-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 15px;
 }
 
 .bottom-image {
-    /*border: 2px solid red;*/
     margin-bottom: 10px;
     height: 150px;
     width: 150px;
     border-radius: 10%;
     background-image: url('https://images.unsplash.com/photo-1422565096762-bdb997a56a84?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8ZG9nfGVufDB8fDB8fHww');
 }
-
-
-
-
-
-
-
-
-
-
