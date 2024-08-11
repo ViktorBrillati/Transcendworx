@@ -2,85 +2,65 @@
 <%- include('nav') -%>
 <div class="container">
     <div class="row">
-        <div class="col-12 text-center">
-            <h1>Our Services</h1>
-            <p>All services are within the Substance Use Disorder/Recovery ecosystem</p>
+        <div class="col-12 text-center" id="firstDiv">
+            <h2 class="font-weight-light">Our Services</h2>
+            <p>
+                All services are wtihin the Substance Use Disorder / Recovery ecosystem
+            </p>
         </div>
-        <div class="row">
-            <div class="col-lg-7">
-                <ul class="serviceHeading">
-                    <li>Initiative, Program, or Business Management:</li>
-                        <ul class="serviceItems">
-                            <li>Market Research</li>
-                            <li>Trends Analysis</li>
-                            <li>Event or Services Analysis</li>
-                            <li>Client/Customer Satisfaction</li>
-                            <li>Focus Group Facilitation and Analysis</li>
-                            <li>Operations Improvement</li>
-                            <li>Policy, procedxure, and protocol development</li>
-                            <li>Strategic Plan Developement</li>
-                            <li>Needs Assessment</li>
-                        </ul>
-                </ul>
-            </div>
-            <div class="col-lg-5">
-                <img src="https://images.unsplash.com/photo-1588600878108-578307a3cc9d?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YW5hbHlzaXN8ZW58MHx8MHx8fDA%3D" alt="Analysis">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-5">
-                <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8dGVjaG5vbG9neXxlbnwwfDB8MHx8fDA%3D" alt="Innovation">
-            </div>
-            <div class="col-lg-7">
-                <ul class="serviceHeading">
-                    <li>Technology Innovation and Implementation:</li>
-                        <ul class="serviceItems">
-                            <li>Market Research</li>
-                            <li>Focus Group Facilitation and Analysis</li>
-                        </ul>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-7">
-                <ul class="serviceHeading">
-                    <li>Training/Education:</li>
-                        <ul class="serviceItems">
-                            <li>Curriculum Development</li>
-                            <li>Stigma (available as a series or single session)</li>
-                                <ul class="serviceItems">
-                                    <li>Overview or Stigma and Impact on Recovery Outcomes</li>
-                                    <li>Stigma Reduction for Staff</li>
-                                    <li>Stigmatizing Language</li>
-                                    <li>Additional topics as requested</li>
-                                </ul>
-                        </ul>
-                </ul>
-            </div>
-            <div class="col-lg-5">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJhaW5pbmd8ZW58MHx8MHx8fDA%3D" alt="Education">
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-5">
-                <img src="https://media.istockphoto.com/id/841614564/photo/seeking-grants-for-an-association-a-small-business-or-for-research.webp?b=1&s=170667a&w=0&k=20&c=StjCEWmouICIUqK1VfAqYWv8Ar1XkIQNr_tDcqYZZw8=" alt="Grant">
-            </div>
-            <div class="col-lg-7">
-            <ul class="serviceHeading">
-                <li>Grant Developemnt:</li>
-                    <ul class="serviceItems">
-                        <li>Ideation</li>
-                        <li>Writing Support</li>
-                        <li>Timeline Planning</li>
-                        <li>Project Management of Application Process</li>
+    </div>
+    <div class="row">
+        <div class="col" id="secondDiv">
+            <ul class="services">
+                <li class="header">Initiative, Program, or Business Management:</li>
+                    <ul class="listItems">
+                        <li class="">Market Research</li>
+                        <li class="">Trends Analysis</li>
+                        <li class="">Event or Services Analysis</li>
+                        <li class="">Client/Customer Satisfaction</li>
+                        <li class="">Focus Group Facilitation and Analysis</li>
+                        <li class="">Operations Improvement</li>
+                        <li class="">Policy, procedure, and protocol improvement</li>
+                        <li class="">Strategic Plan Development</li>
+                        <li class="">Needs Assessment</li>
                     </ul>
             </ul>
         </div>
+        <div class="col" id="secondDiv">
+            <ul class="services">
+                <li class="header">Technology Innovation and Implementation:</li>
+                    <ul class="listItems">
+                        <li class="">Market Research</li>
+                        <li class="">Focus Group Facilitation and Analysis</li>
+                    </ul>
+            </ul>
         </div>
-
+        <div class="col" id="secondDiv">
+            <ul class="services">
+                <li class="header">Training / Education:</li>
+                    <ul class="sublist">
+                        <li class="">Curriculum Development</li>
+                        <li class="secondaryHeader">Stigma (available as a series or single session):</li>
+                            <ul class="listItems">
+                                <li class="">Overview or stigma and impact on recovery outcomes</li>
+                                <li class="">Stigma Reduction for Staff</li>
+                                <li class="">Stigmatazing Language</li>
+                                <li class="">Additional topics as requested</li>
+                            </ul>
+                    </ul>
+            </ul>
+        </div>
+        <div class="col" id="secondDiv">
+            <ul class="services">
+                <li class="header">Grant Developement:</li>
+                    <ul class="listItems">
+                        <li class="">Ideation</li>
+                        <li class="">Writing Support</li>
+                        <li class="">Timeline Planning</li>
+                        <li class="">Project Management of Application Process</li>
+                    </ul>
+            </ul>
+        </div>
     </div>
 </div>
 <%- include('partials/footer') -%>
