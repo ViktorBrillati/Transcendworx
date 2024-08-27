@@ -48,8 +48,8 @@ app.use(flash());
 app.get('/', (req, res) => {
     res.render('index');
 });
-app.get('/bio', (req, res) => {
-    res.render('bio');
+app.get('/team', (req, res) => {
+    res.render('team');
 });
 app.get('/services', (req, res) => {
     res.render('services');
