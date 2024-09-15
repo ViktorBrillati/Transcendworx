@@ -10,7 +10,7 @@ const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const flash = require('connect-flash');
 
-const blogController = require('./controllers/blogpage.js');
+const blogController = require('./controllers/home.js');
 const newPostController = require('./controllers/newPost.js');
 const getPostController = require('./controllers/getPost.js');
 const storePostController = require('./controllers/storePost.js');
@@ -45,6 +45,8 @@ app.use('*', (req, res, next) => {
 });
 app.use(flash());
 
+//Routes
+
 app.get('/', (req, res) => {
     res.render('index');
 });
@@ -54,16 +56,18 @@ app.get('/team', (req, res) => {
 app.get('/services', (req, res) => {
     res.render('services');
 });
-app.get('/form', (req, res) => {
-    res.render('form');
+
+app.get('/bloghome', (req, res) => {
+    res.render('bloghome');
 });
+
 
 app.get('/auth/login', redirectIfAuthenticatedMiddleware, loginController);
 app.get('/auth/register', redirectIfAuthenticatedMiddleware, newUserController);
 app.get('/posts/new', authMiddleware, newPostController);
 app.get('/blog', blogController);
 app.get('/post/:id', getPostController);
-app.get('/auth/register', redirectIfAuthenticatedMiddleware, newUserController);
+
 
 app.post('/posts/store', authMiddleware, storePostController);
 app.post('/users/register', redirectIfAuthenticatedMiddleware, storeUserController);

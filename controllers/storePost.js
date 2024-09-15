@@ -1,3 +1,4 @@
+//require out BlogPost model so we can do CRUD 
 const BlogPost = require('../models/BlogPost.js');
 
 module.exports = async (req, res) => {
