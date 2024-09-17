@@ -73,7 +73,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #fff;
+  --bs-link-color: #71002C;
   --bs-link-hover-color: #c0c0c0;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff4cc;
@@ -247,7 +247,7 @@ sup {
 
 a {
   color: var(--bs-link-color);
-  text-decoration: underline;
+  text-decoration: none;
 }
 a:hover {
   color: var(--bs-link-hover-color);
@@ -10946,8 +10946,8 @@ header.masthead {
   padding-top: 10.5rem;
   padding-bottom: 6rem;
   text-align: center;
-  color: #fff;
-  background-image: url("../assets/img/header-bg.jpg");
+  color: #71002C;
+  background-image: url("");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

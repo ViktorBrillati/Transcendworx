@@ -2,7 +2,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/User.js');
 
 module.exports = async (req, res) => {
-    const { username, password } = req.body
+    const { username, password } = req.body;
     
     const user = await User.findOne({ username: username });
     
@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
         
         if (same) {
             req.session.userId = user._id;
-            res.redirect('/blog');
+            res.redirect('/bloghome');
         } else {
             res.redirect('/auth/login');
         }

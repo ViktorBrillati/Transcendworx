@@ -1,13 +1,13 @@
 <%-include('partials/header');-%>
 <%-include('partials/nav');-%>
 <!-- Page Header-->
-<header class="masthead" style="background-image: url('/img/home-bg.jpg')">
+<header class="masthead" style="background-image: url('/images/posts.jpg')">
     <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
                     <h1>Blog Page</h1>
-                    <span class="subheading">A Blog created with the MERN stack</span>
+                    <span class="subheading">Transcendworx Blog Page</span>
                 </div>
             </div>
         </div>
@@ -18,15 +18,14 @@
     <div class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7">
             <!--we insert javascript in our ejs by looping through our blogposts array-->
-            <% for(var i = 0; i < blogposts.length; i++){%>
+            <% for(var i = 0; i < blogposts.length; i++){ %>
             <!-- Post preview-->
             <div class="post-preview">
                 <!--we change the href to make each posts it's own page-->
                 <a href="/post/<%= blogposts[i]._id%>">
                     <h2 class="post-title"><%=blogposts[i].title%></h2>
-                    <h3 class="post-subtitle"><%- blogposts[i].body%></h3>
+                    <h3 class="post-subtitle"><%-blogposts[i].body%></h3>
                 </a>
-
             </div>
             <!-- Divider-->
             <hr class="my-4" />

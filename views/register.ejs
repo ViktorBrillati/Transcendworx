@@ -1,5 +1,18 @@
 <%- include('partials/header') -%>
 <%- include('partials/nav') -%>
+<!-- Page Header
+<header class="masthead" style="background-image: url('/img/register.jpg')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Register a new account</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>--->
+<!-- Main Content-->
 <main class="mb-4">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -13,23 +26,19 @@
                     </ul>
                     <% } %>
                     <form action="/users/register" method="POST" enctype="multipart/form-data">
-                        <div clas="control-group">
-                            <div class="form-group floating-label-form-group controls">
-                                <label for="username">User Name:</label>
-                                <input class="form-control" id="username" name="username" type="text"
-                                    placeholder="User Name" value="<%=username%>" />
-                            </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="username" name="username" type="text"
+                                placeholder="User Name" value="<%=username%>" />
+                            <label for="username">User Name:</label>
                         </div>
-                        <div class="control-group">
-                            <div class="form-group floating-label-form-group controls">
-                                <label for="password">Password:</label>
-                                <input class="form-control" id="password" name="password" type="password"
-                                    placeholder="Password" value="<%=password%>" />
-                            </div>
+                        <div class="form-floating">
+                            <input class="form-control" id="password" name="password" type="password"
+                                placeholder="Password" value="<%password%>" />
+                            <label for="password">Password:</label>
                         </div>
                         <br />
                         <div class="form-group">
-                            <button class="btn btn-primary" id="submitButton" type="submit">Register</button>
+                            <button class="btn text-uppercase" id="submitButton" type="submit">Register</button>
                         </div>
                     </form>
                 </div>

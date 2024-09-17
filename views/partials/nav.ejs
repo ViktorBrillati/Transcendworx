@@ -15,12 +15,27 @@
                         style="color:#fff;margin-right:20px;">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="https://www.sudcx.com/"
                         style="color:#fff;margin-right:20px;" target="_blank">SUDCx</a></li>
+
+
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="/bloghome" role="button"
+                    <a class="nav-link dropdown-toggle" id="navbarDropdownBlog" href="#!" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false" style="color:#fff;">Blog</a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownBlog">
-                        <li><a class="dropdown-item" href="/auth/register">Blog Home</a></li>
-                        <li><a class="dropdown-item" href="/blog">Blog Post</a></li>
+                        <%if(loggedIn){%>
+                        <li class="nav-item"><a class="nav-link" href="/posts/new"
+                                style="color:#71002C;margin-right:20px;">New
+                                Post</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/auth/logout"
+                                style="color:#71002C;margin-right:20px;">Log
+                                Out</a></li>
+                        <%}%>
+                        <%if(!loggedIn){%>
+                        <li class="nav-item"><a class="nav-link" href="/auth/login"
+                                style="color:#71002C;margin-right:20px;">Login</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/auth/register"
+                                style="color:#71002C;margin-right:20px;">Register</a></li>
+                        <%}%>
                     </ul>
                 </li>
             </ul>

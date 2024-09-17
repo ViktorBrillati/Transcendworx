@@ -1,27 +1,59 @@
 <%- include('partials/header') -%>
 <%- include('partials/nav') -%>
-<div class="container">
-  <div class="row">
-    <div class="col-lg-8 col-md-10 mx-auto">
-      <form action="/posts/store" method="POST">
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls">
-            <label>Title</label>
-            <input type="text" class="form-control" placeholder="Title" id="title" name="title">
-          </div>
+<!-- Page Header
+<header class="masthead" style="background-image: url('')">
+  <div class="container position-relative px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="page-heading">
+          <h1>Create New Post</h1>
         </div>
-        <div class="control-group">
-          <div class="form-group floating-label-form-group controls">
-            <label>Description</label>
-            <textarea rows="5" class="form-control" id="body" name="body"></textarea>
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-        <br>
-        <div id="success"></div>
-        <button type="submit" class="btn btn-primary" id="sendMessageButton">Send</button>
-      </form>
+      </div>
     </div>
   </div>
-</div>
+</header>-->
+<!-- Main Content-->
+<main class="mb-4">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-4 gx-lg-5 justify-content-center">
+      <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="my-5">
+          <form action="/posts/store" method="POST" enctype="multipart/form-data">
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label for="title">Title</label>
+                <input class="form-control" id="title" name="title" type="text" placeholder="Title" />
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label for="title">Description</label>
+                <textarea class="form-control" name="body" id="body" rows="5"></textarea>
+                <script>
+                  $(document).ready(function () {
+                    $('#body').summernote({
+                      placeholder: 'Hello Bootstrap 5',
+                      tabsize: 2,
+                      height: 200
+                    });
+                  });
+                </script>
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="form-group floating-label-form-group controls">
+                <label for="image">Image</label>
+                <input class="form-control" id="image" name="image" type="file">
+              </div>
+            </div>
+            <br />
+            <div class="form-group">
+              <button type="submit" class="btn" id="sendMessageButton">Post</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
 <%- include('partials/footer') -%>

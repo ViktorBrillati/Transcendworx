@@ -10,7 +10,7 @@ const fileUpload = require('express-fileupload');
 const session = require('express-session');
 const flash = require('connect-flash');
 
-const blogController = require('./controllers/home.js');
+const bloghomeController = require('./controllers/home.js');
 const newPostController = require('./controllers/newPost.js');
 const getPostController = require('./controllers/getPost.js');
 const storePostController = require('./controllers/storePost.js');
@@ -21,6 +21,7 @@ const newUserController = require('./controllers/newUser.js');
 const authMiddleware = require('./middleware/authMiddleware.js');
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware.js');
 const validationMiddleware = require('./middleware/validationMiddleware.js');
+const logoutController = require('./controllers/logout.js');
 
 app.set("view engine", "ejs");
 
@@ -57,21 +58,20 @@ app.get('/services', (req, res) => {
     res.render('services');
 });
 
-app.get('/bloghome', (req, res) => {
-    res.render('bloghome');
-});
-
-
-app.get('/auth/login', redirectIfAuthenticatedMiddleware, loginController);
+app.get('/bloghome', bloghomeController);
 app.get('/auth/register', redirectIfAuthenticatedMiddleware, newUserController);
-app.get('/posts/new', authMiddleware, newPostController);
-app.get('/blog', blogController);
+app.get('/auth/login', redirectIfAuthenticatedMiddleware, loginController);
+app.get('/auth/logout', logoutController);
 app.get('/post/:id', getPostController);
+app.get('/posts/new', authMiddleware, newPostController);
 
-
-app.post('/posts/store', authMiddleware, storePostController);
 app.post('/users/register', redirectIfAuthenticatedMiddleware, storeUserController);
 app.post('/users/login', redirectIfAuthenticatedMiddleware, loginUserController);
+app.post('/posts/store', authMiddleware, storePostController);
+
+app.use((req, res) => {
+    res.render('notfound');
+});
 
 let port = process.env.PORT;
 if (port == null || port == "") {
